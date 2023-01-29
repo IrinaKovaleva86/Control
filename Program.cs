@@ -18,4 +18,18 @@ void PrintArray(string[] array)
     }
     Console.WriteLine();
 }
+Console.Write("Введите количество элементов: ");
+int size = Convert.ToInt32(Console.ReadLine());
+string[] firstArray = new string[size];
+string[] secondArray = new string[firstArray.Length];
+for (int i = 0; i < size; i++)
+{
+    Console.Write($"Введите {i+1}-й элемент: ");
+    string element = Console.ReadLine();
+    firstArray[i] = element;
+}
+
+PrintArray(firstArray);
+NewArray(firstArray, secondArray);
+PrintArray(secondArray);
 
